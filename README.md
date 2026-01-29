@@ -75,3 +75,111 @@ export default defineConfig([
 ])
 ```
 >>>>>>> 6e499d3 (Screen Share test App)
+# 🖥️ Screen Share Test App
+
+A modern frontend application that tests browser screen-sharing capabilities using native Web APIs.  
+Built as part of a **Frontend Shortlisting Task**.
+
+---
+
+## 🚀 Live Links
+
+🌍 **Live App:** https://screen-share-test-indol.vercel.app/ 
+📂 **GitHub Repo:** https://github.com/SanjanaGS-21/screen-share-test
+
+---
+
+## 📌 Project Objective
+
+This project demonstrates:
+
+- Browser screen-sharing permission handling
+- Media stream lifecycle management
+- Real-time screen preview
+- Proper cleanup of media tracks
+- Handling of user cancellation & permission errors
+- Clean React state management
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| React + Vite | Frontend framework |
+| TypeScript | Type safety |
+| Tailwind CSS | Modern UI styling |
+| Web APIs | Screen capture functionality |
+
+---
+
+## ✨ Features
+
+### ✅ Browser Capability Check
+Checks if `getDisplayMedia` is supported before allowing testing.
+
+### 🎥 Live Screen Sharing
+- Requests screen sharing permission
+- Shows real-time preview
+- Displays resolution and display type
+
+### 🔄 Lifecycle Handling
+- Detects when user stops sharing
+- Releases media tracks
+- Prevents memory leaks
+
+### ❌ Error Handling
+Handles:
+- Permission denied
+- User cancelled picker
+- Unsupported browser
+- Unknown errors
+
+### ♻ Retry Flow
+Allows restarting screen share without reusing old streams.
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+<img width="1899" height="875" alt="Screenshot 2026-01-29 125017" src="https://github.com/user-attachments/assets/2d7ba287-423b-4800-a078-9e10caf76ab0" />
+
+
+### 🎥 Screen Sharing Test
+<img width="1879" height="638" alt="Screenshot 2026-01-29 125026" src="https://github.com/user-attachments/assets/1f162364-c90a-4def-9cc0-2e8f65729bf5" />
+
+
+### 📊 Live Preview & Resolution Info
+<img width="1200" height="879" alt="Screenshot 2026-01-29 125036" src="https://github.com/user-attachments/assets/eaebffde-d9a3-4f46-9464-4299e9360b11" />
+
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+│ └── Button.tsx
+├── hooks/
+│ └── useScreenShare.ts
+├── pages/
+│ ├── Home.tsx
+│ └── ScreenTest.tsx
+├── App.tsx
+└── main.tsx
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+http://localhost:5173
+
+git push
+# Import GitHub repo into Vercel and deploy
+
